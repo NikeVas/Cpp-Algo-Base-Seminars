@@ -37,7 +37,7 @@ class Optional {
     if (other.empty_) {
       return *this;
     }
-    new (data_) T(std::launder(*reinterpret_cast<T*>(other.data_))); 
+    new (data_) T(*reinterpret_cast<T*>(other.data_)); 
   }
 
  private:
