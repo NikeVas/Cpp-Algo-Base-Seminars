@@ -154,7 +154,7 @@ std::ptrdiff_t Distance(Iterator begin, Iterator end) {
 }
 
 constexpr int Foo(int x) {
-  if constexpr(std::is_constant_evaluated()) {
+  if consteval /*constexpr(std::is_constant_evaluated())*/ {
     return 1;
   } else {
     return 2;
